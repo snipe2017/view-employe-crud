@@ -1,0 +1,67 @@
+<h1>{{title}} Customer</h1>
+<hr>
+
+<form [formGroup]="customerForm" (ngSubmit)="save()" novalidate>
+  <div class="form-group row">
+    <label for="" class="col-md-12">FirstName</label>
+    <div class="col-md-4">
+      <input type="text" class="form-control" formControlName="fname">
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-md-12">Lastname</label>
+    <div class="col-md-4">
+      <input type="text" class="form-control" formControlName="lname">
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-md-12">Phone</label>
+    <div class="col-md-4">
+      <input type="text" class="form-control" formControlName="mobileNo">
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+  <div class="form-group row">
+    <div class="col-md-12">
+      <input type="submit" class="btn btn-primary" value="Save" />
+      <input type="button" class="btn btn-warning" value="Cancel" (click)="cancel(empId)">
+    </div>
+  </div>
+</form>
+<!-- <div class="col-md-6">
+  <div class="error" *ngIf="!customerForm.controls['fname'].valid && (customerForm.controls['name'].dirty || submitted)">
+      <div *ngIf="customerForm.controls['fname'].hasError('required')">
+          Name is required
+      </div>
+      <div *ngIf="customerForm.controls['fname'].hasError('minlength')">
+         Min. 3 charaters
+      </div>
+      <div *ngIf="customerForm.controls['fname'].hasError('maxlength')">
+          Must not exceed 30 charaters
+      </div>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="error" 
+       *ngIf="fname.invalid && (name.dirty || submitted)">
+      <div *ngIf="fname.errors.required">
+          Name is required
+      </div>
+      <div *ngIf="fname.errors.minlength">
+         Min. 3 charaters
+      </div>
+      <div *ngIf="fname.errors.maxlength">
+          Must not exceed 30 charaters
+      </div>
+  </div>
+  </div>
+  <div class="col-md-6">
+    <div class="error" 
+         *ngIf="mobileNo.invalid && (mobileNo.dirty || submitted)">
+        <div *ngIf="mobileNo.errors.pattern">
+            Invalid phone number!
+        </div>
+    </div>            
+</div> -->
